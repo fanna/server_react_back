@@ -56,6 +56,7 @@ socket.connect()
 // Now that you are connected, you can join channels with a topic:
 let channel = socket.channel("rooms:lobby", {})
 let messagesContainer = $("#messages")
+let json = "false"
 
 channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
@@ -64,7 +65,7 @@ channel.join()
 
 
 window.setInterval(function(){
-  channel.push("new_msg", {body: "JSON that will go here"})
+  channel.push("new_msg", {body: json})
 }, 5000);
 
 channel.on("new_msg", payload => {
