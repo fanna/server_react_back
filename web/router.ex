@@ -19,6 +19,7 @@ defmodule ServerReactBack.Router do
     get "/", PageController, :index
   end
 
+
   # Other scopes may use custom stacks.
   # scope "/api", ServerReactBack do
   #   pipe_through :api

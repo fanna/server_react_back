@@ -1,5 +1,5 @@
 # Server React Back
-This is the backend part of the Server React app that you can find [here](https://github.com/fanna/server-react)
+This is the backend part of the Server React app that you can find [here](https://github.com/fanna/server_react_front)
 
 # Quick start
 

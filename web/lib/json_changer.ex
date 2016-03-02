@@ -4,7 +4,7 @@ defmodule ServerReactBack.JsonChanger do
   end
 
   defp random() do
-    list = ["true", "false"]
+    list = [true, false]
     Enum.random(list)
   end
 end
