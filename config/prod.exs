@@ -13,7 +13,8 @@ use Mix.Config
 # which you typically run after static files are built.
 config :server_react_back, ServerReactBack.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
+  url: [scheme: "https", host: "rocky-ridge-42687.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
@@ -27,7 +28,7 @@ config :logger, level: :info
 #
 #     config :server_react_back, ServerReactBack.Endpoint,
 #       ...
-       url: [host: "rocky-ridge-42687.herokuapp.com", port: 443]
+#       url: [host: "rocky-ridge-42687.herokuapp.com", port: 443]
 #       https: [port: 443,
 #               keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
 #               certfile: System.get_env("SOME_APP_SSL_CERT_PATH")]
