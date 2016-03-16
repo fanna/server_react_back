@@ -27,7 +27,7 @@ config :logger, level: :info
 #
 #     config :server_react_back, ServerReactBack.Endpoint,
 #       ...
-       url: [host: "rocky-ridge-42687.herokuapp.com", port: 443],
+       url: [host: "rocky-ridge-42687.herokuapp.com", port: 443]
 #       https: [port: 443,
 #               keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
 #               certfile: System.get_env("SOME_APP_SSL_CERT_PATH")]
