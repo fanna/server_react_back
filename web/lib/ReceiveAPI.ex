@@ -3,7 +3,7 @@ defmodule ReceiveAPI do
   alias Receive
 
   def receive do
-    {:ok, connection} = AMQP.Connection.open(host: "https://rocky-ridge-42687.herokuapp.co    m")
+    {:ok, connection} = AMQP.Connection.open(host: "rocky-ridge-42687.herokuapp.com", port: 443)
     {:ok, channel} = AMQP.Channel.open(connection)
     AMQP.Queue.declare(channel, "hello")
     AMQP.Basic.consume(channel, "hello", nil, no_ack: true)
