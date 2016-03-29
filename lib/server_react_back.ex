@@ -12,7 +12,7 @@ defmodule ServerReactBack do
       # Start the Ecto repository
       supervisor(ServerReactBack.Repo, []),
       # Here you could define other workers and supervisors as children
-      # worker(ServerReactBack.Worker, [arg1, arg2, arg3]),
+      worker(Task, [&ReceiveAPI.receive/0]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
