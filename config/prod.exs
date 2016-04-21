@@ -26,6 +26,11 @@ config :server_react_back, ServerReactBack.Repo,
   url: System.get_env("DATABASE_URL"),
   pool_size: 20
 
+config :exredis,
+  url: "redis://h:pe3ua42ml1bmiebdpefmab70qp8@ec2-54-235-163-223.compute-1.amazonaws.com:12009",
+  reconnect: :no_reconnect,
+  max_queue: :infinity
+
 
 # ## SSL Support
 #

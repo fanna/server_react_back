@@ -32,6 +32,11 @@ config :logger, :console, format: "[$level] $message\n"
 # and calculating stacktraces is usually expensive.
 config :phoenix, :stacktrace_depth, 20
 
+config :exredis,
+  url: "redis://h:pe3ua42ml1bmiebdpefmab70qp8@ec2-54-235-163-223.compute-1.amazonaws.com:12009",
+  reconnect: :no_reconnect,
+  max_queue: :infinity
+
 # Configure your database
 config :server_react_back, ServerReactBack.Repo,
   adapter: Ecto.Adapters.Postgres,

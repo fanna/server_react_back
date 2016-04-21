@@ -19,7 +19,7 @@ defmodule ServerReactBack.Mixfile do
   def application do
     [mod: {ServerReactBack, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :amqp]]
+                    :phoenix_ecto, :postgrex, :amqp, :exredis]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,9 @@ defmodule ServerReactBack.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:amqp, "~> 0.1.4"}]
+     {:amqp, "~> 0.1.4"},
+     {:json, "~> 0.3.0"},
+     {:exredis, "~> 0.2.4"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

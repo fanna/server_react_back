@@ -23,6 +23,11 @@ config :logger, :console,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
 
+config :exredis,
+  url: "redis://h:pe3ua42ml1bmiebdpefmab70qp8@ec2-54-235-163-223.compute-1.amazonaws.com:12009",
+  reconnect: :no_reconnect,
+  max_queue: :infinity
+
 # Configure phoenix generators
 config :phoenix, :generators,
   migration: true,
