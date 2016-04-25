@@ -36,4 +36,6 @@ defmodule ServerReactBack.Endpoint do
     signing_salt: "Dr2SjkV8"
 
   plug ServerReactBack.Router
+
+  plug CORSPlug
 end

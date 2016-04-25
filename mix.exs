@@ -39,7 +39,8 @@ defmodule ServerReactBack.Mixfile do
      {:cowboy, "~> 1.0"},
      {:amqp, "~> 0.1.4"},
      {:json, "~> 0.3.0"},
-     {:exredis, "~> 0.2.4"}]
+     {:exredis, "~> 0.2.4"},
+     {:cors_plug, "~> 1.1"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

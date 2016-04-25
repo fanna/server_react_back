@@ -5,7 +5,7 @@ defmodule ServerReactBack.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
-    plug :protect_from_forgery
+    #plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
@@ -13,10 +13,19 @@ defmodule ServerReactBack.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :csrf do
+    plug :protect_from_forgery
+  end
+
   scope "/", ServerReactBack do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    #get "/status", StatusController, :index
+
+    get "/status", StatusController, :show
+
   end
 
 
