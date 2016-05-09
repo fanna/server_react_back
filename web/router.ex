@@ -5,16 +5,12 @@ defmodule ServerReactBack.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
-    #plug :protect_from_forgery
+    plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
   pipeline :api do
     plug :accepts, ["json"]
-  end
-
-  pipeline :csrf do
-    plug :protect_from_forgery
   end
 
   scope "/", ServerReactBack do
@@ -25,6 +21,8 @@ defmodule ServerReactBack.Router do
     #get "/status", StatusController, :index
 
     get "/status", StatusController, :show
+
+    post"/status", StatusController, :show
 
   end
 

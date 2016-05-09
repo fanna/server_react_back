@@ -35,7 +35,7 @@ defmodule ServerReactBack.Endpoint do
     key: "_server_react_back_key",
     signing_salt: "Dr2SjkV8"
 
-  plug ServerReactBack.Router
+  plug Corsica, [origins: ["http://localhost:3000"]]
 
-  plug CORSPlug
+  plug ServerReactBack.Router
 end
