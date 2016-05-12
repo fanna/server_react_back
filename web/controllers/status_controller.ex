@@ -6,6 +6,6 @@ defmodule ServerReactBack.StatusController do
   end
 
   def show(conn, params) do
-    render conn, "show.json", status: Status.get |> :unicode.characters_to_binary(:latin1, :utf8) |> Poison.encode!
+    render conn, "show.json", status: Status.get |> :unicode.characters_to_binary(:latin1, :utf8) #|> Poison.encode!
   end
 end
