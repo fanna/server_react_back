@@ -33,7 +33,7 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 config :exredis,
-  url: "redis://h:pe3ua42ml1bmiebdpefmab70qp8@ec2-54-235-163-223.compute-1.amazonaws.com:12009",
+  url: "redis://h:p9fldqitj7713o1m5m5qfqkomj7@ec2-54-235-163-223.compute-1.amazonaws.com:12009",
   reconnect: :no_reconnect,
   max_queue: :infinity
 
